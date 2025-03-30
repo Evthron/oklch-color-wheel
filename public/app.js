@@ -175,5 +175,14 @@ for (let i = 0; i < 12; i++){
   ctx.restore();
 }
 
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  const filename = `oklch_colorwheel_L${Math.round(params.l * 100)}_C${Math.round(params.c * 100)}_R${params.rotation}_G${Math.round(params.grayL * 100)}_H${params.hueOffset}.png`;
+  
+  const link = document.createElement('a');
+  link.download = filename;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
+
 // Start
 init();

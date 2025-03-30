@@ -1,63 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OKLCH Interactive Color Wheel</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: sans-serif;
-      padding: 20px;
-    }
-    canvas {
-      border-radius: 50%;
-      cursor: grab;
-      margin: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .controls {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-    }
-    input[type="range"] {
-      width: 100%;
-    }
-    label {
-      display: block;
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>OKLCH Interactive Color Wheel</h1>
-  <canvas id="colorWheel" width="600" height="600"></canvas>
-  
-  <div class="controls">
-    <label>
-      Lightness (L): <span id="lValue">0.75</span>
-      <input type="range" id="lControl" min="0" max="1" step="0.01" value="0.75">
-    </label>
-    <label>
-      Chroma (C): <span id="cValue">0.12</span>
-      <input type="range" id="cControl" min="0" max="0.2" step="0.01" value="0.12">
-    </label>
-    <label>
-      Rotation: <span id="rotationValue">0</span>°
-      <input type="range" id="rotationControl" min="0" max="360" step="15" value="0">
-    </label>
-    <label>
-      Neutral Gray Lightness: <span id="grayValue">0.5</span>
-      <input type="range" id="grayControl" min="0" max="1" step="0.01" value="0.5">
-    </label>
-    <label>
-      Hue Offset: <span id="hueOffsetValue">0</span>°
-      <input type="range" id="hueOffsetControl" min="0" max="15" value="0">
-    </label>
-  </div>
+  <head>
+    <title>OKLCH Interactive Color Wheel</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      canvas {
+        border-radius: 50%;
+        cursor: grab;
+        margin: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .controls {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+      input[type="range"] {
+        width: 100%;
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OKLCH Interactive Color Wheel</h1>
+    <canvas id="colorWheel" width="600" height="600"></canvas>
 
-  <script src="app.js"></script>
-</body>
+    <div class="controls">
+      <label>
+        Lightness (L): <span id="lValue">0.75</span>
+        <input
+          type="range"
+          id="lControl"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.75"
+        />
+      </label>
+      <label>
+        Chroma (C): <span id="cValue">0.12</span>
+        <input
+          type="range"
+          id="cControl"
+          min="0"
+          max="0.2"
+          step="0.01"
+          value="0.12"
+        />
+      </label>
+      <label>
+        Rotation: <span id="rotationValue">0</span>°
+        <input
+          type="range"
+          id="rotationControl"
+          min="0"
+          max="360"
+          step="15"
+          value="0"
+        />
+      </label>
+      <label>
+        Neutral Gray Lightness: <span id="grayValue">0.5</span>
+        <input
+          type="range"
+          id="grayControl"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.5"
+        />
+      </label>
+      <label>
+        Hue Offset: <span id="hueOffsetValue">0</span>°
+        <input type="range" id="hueOffsetControl" min="0" max="15" value="0" />
+      </label>
+      <button
+        id="downloadBtn"
+        style="
+          margin-top: 10px;
+          padding: 8px 12px;
+          background: #4caf50;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Download image
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
