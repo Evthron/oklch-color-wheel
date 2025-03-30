@@ -30,3 +30,6 @@ node server.js
 ```
 http://localhost:3000
 ```
+
+## Inspiration
+Inspired by [OKLCH Color Picker & Converter](https://oklch.com) by evilmartians and [Color : A Course in Mastering the Art of Mixing Colors](https://openlibrary.org/books/OL17920709M/Color) by Betty Edwards
