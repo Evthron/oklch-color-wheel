@@ -2,7 +2,7 @@
 
 An interactive color wheel using the OKLCH color space with adjustable parameters.
 
-![oklch_colorwheel_L75_C12_R0_G50_H0](https://github.com/user-attachments/assets/e41ee579-7481-4d0e-bf1a-81f3c5bf8701)
+<img src="https://github.com/user-attachments/assets/e41ee579-7481-4d0e-bf1a-81f3c5bf8701" alt="oklch_color_wheel" width="300" />
 
 ## Features
 
